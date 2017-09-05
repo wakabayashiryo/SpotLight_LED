@@ -1,0 +1,313 @@
+[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 12F1822 ]
+[d frameptr 6 ]
+"20 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
+[e E2319 . `uc
+TMR0_PRESCALER2 0
+TMR0_PRESCALER4 1
+TMR0_PRESCALER8 2
+TMR0_PRESCALER16 3
+TMR0_PRESCALER32 4
+TMR0_PRESCALER64 5
+TMR0_PRESCALER128 6
+TMR0_PRESCALER256 7
+]
+"22
+[e E2304 . `uc
+TMR2_PRESCALER1 0
+TMR2_PRESCALER4 1
+TMR2_PRESCALER16 2
+TMR2_PRESCALER64 3
+]
+"30
+[e E2276 . `uc
+BAUD_300 0
+BAUD_1200 1
+BAUD_2400 2
+BAUD_9600 3
+BAUD_10417 4
+BAUD_19_2K 5
+BAUD_57_6K 6
+BAUD_115_2K 7
+]
+"6 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_Timer0.c
+[e E2341 . `uc
+TMR0_PRESCALER2 0
+TMR0_PRESCALER4 1
+TMR0_PRESCALER8 2
+TMR0_PRESCALER16 3
+TMR0_PRESCALER32 4
+TMR0_PRESCALER64 5
+TMR0_PRESCALER128 6
+TMR0_PRESCALER256 7
+]
+"38 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_UART.c
+[e E2328 . `uc
+BAUD_300 0
+BAUD_1200 1
+BAUD_2400 2
+BAUD_9600 3
+BAUD_10417 4
+BAUD_19_2K 5
+BAUD_57_6K 6
+BAUD_115_2K 7
+]
+"4 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_PWM.c
+[e E2341 . `uc
+TMR2_PRESCALER1 0
+TMR2_PRESCALER4 1
+TMR2_PRESCALER16 2
+TMR2_PRESCALER64 3
+]
+"464 /opt/microchip/xc8/v1.43/sources/common/doprnt.c
+[v _printf printf `(i  1 e 2 0 ]
+"62 /opt/microchip/xc8/v1.43/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.43/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"8 /opt/microchip/xc8/v1.43/sources/common/isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+"6 /opt/microchip/xc8/v1.43/sources/common/lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v1.43/sources/common/lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"15 /opt/microchip/xc8/v1.43/sources/common/Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"6 /opt/microchip/xc8/v1.43/sources/pic/eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"16 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"46
+[v _Basic_Init Basic_Init `(v  1 e 1 0 ]
+"63
+[v _Handler Handler `II(v  1 e 1 0 ]
+"81
+[v _UART_Init_Port UART_Init_Port `(v  1 e 1 0 ]
+"88
+[v _PWM_Init_Port PWM_Init_Port `(v  1 e 1 0 ]
+"95
+[v _mTouch_Init_Port mTouch_Init_Port `(v  1 e 1 0 ]
+"6 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_mTouch.c
+[v _mTouch_Init mTouch_Init `(v  1 e 1 0 ]
+"33
+[v _mTouch_Scan mTouch_Scan `(v  1 e 1 0 ]
+"51
+[v _mTouch_Count1ms mTouch_Count1ms `(v  1 e 1 0 ]
+"60
+[v _mTouch_Check mTouch_Check `(uc  1 e 1 0 ]
+"3 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_PWM.c
+[v _PWM_Init PWM_Init `(v  1 e 1 0 ]
+"5 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_Timer0.c
+[v _Timer0_Init Timer0_Init `(v  1 e 1 0 ]
+"21
+[v _Timer0_CheckFlag Timer0_CheckFlag `(uc  1 e 1 0 ]
+"37 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_UART.c
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+"70
+[v _UART_Transmit UART_Transmit `(v  1 e 1 0 ]
+"76
+[v _putch putch `(v  1 e 1 0 ]
+"107
+[v _UART_Interrupt UART_Interrupt `(v  1 e 1 0 ]
+"427 /opt/microchip/xc8/v1.43/include/pic12f1822.h
+[v _PORTA PORTA `VEuc  1 e 1 @12 ]
+"819
+[v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
+"839
+[v _TMR1 TMR1 `VEus  1 e 2 @22 ]
+"886
+[v _T1CON T1CON `VEuc  1 e 1 @24 ]
+"958
+[v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
+"1035
+[v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
+"1055
+[v _PR2 PR2 `VEuc  1 e 1 @27 ]
+"1075
+[v _T2CON T2CON `VEuc  1 e 1 @28 ]
+"1146
+[v _CPSCON0 CPSCON0 `VEuc  1 e 1 @30 ]
+"1206
+[v _CPSCON1 CPSCON1 `VEuc  1 e 1 @31 ]
+"1240
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1392
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
+"1643
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2488
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"2630
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2871
+[v _RCREG RCREG `VEuc  1 e 1 @409 ]
+"2891
+[v _TXREG TXREG `VEuc  1 e 1 @410 ]
+"2927
+[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
+"2977
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
+"3010
+[v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
+"3072
+[v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
+"3186
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"3935
+[v _CCPR1L CCPR1L `VEuc  1 e 1 @657 ]
+"3975
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @659 ]
+"5120
+[v _BRG16 BRG16 `VEb  1 e 0 @3323 ]
+"5254
+[v _CREN CREN `VEb  1 e 0 @3308 ]
+"5312
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"5386
+[v _LATA5 LATA5 `VEb  1 e 0 @2149 ]
+"5450
+[v _OERR OERR `VEb  1 e 0 @3305 ]
+"5486
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"5524
+[v _RCIE RCIE `VEb  1 e 0 @1165 ]
+"5526
+[v _RCIF RCIF `VEb  1 e 0 @141 ]
+"5572
+[v _SPEN SPEN `VEb  1 e 0 @3311 ]
+"5708
+[v _TMR0IE TMR0IE `VEb  1 e 0 @93 ]
+"5710
+[v _TMR0IF TMR0IF `VEb  1 e 0 @90 ]
+"5776
+[v _TXIF TXIF `VEb  1 e 0 @140 ]
+"354 /opt/microchip/xc8/v1.43/sources/common/doprnt.c
+[v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
+[s S56 . 8 `uc 1 CPS_Channel 1 0 `i 1 Threshould_Diff 2 1 `ui 1 CPS_Data 2 3 `ui 1 CPS_PreData 2 5 `uc 1 Check_Interval 1 7 ]
+"3 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_mTouch.c
+[v _config_ptr config_ptr `*.4S56  1 s 1 config_ptr ]
+"4
+[v _using_channel using_channel `uc  1 s 1 using_channel ]
+"3 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_Timer0.c
+[v _TMR0_ReloadTemp TMR0_ReloadTemp `uc  1 s 1 TMR0_ReloadTemp ]
+"3 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_UART.c
+[v _UART_Buffer UART_Buffer `[32]uc  1 s 32 UART_Buffer ]
+"4
+[v _UART_Buffer_inptr UART_Buffer_inptr `uc  1 s 1 UART_Buffer_inptr ]
+"5
+[v _UART_Buffer_outptr UART_Buffer_outptr `uc  1 s 1 UART_Buffer_outptr ]
+"13
+[v _baudtable baudtable `DC[8]ui  1 s 16 baudtable ]
+"16 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+[s S56 . 8 `uc 1 CPS_Channel 1 0 `i 1 Threshould_Diff 2 1 `ui 1 CPS_Data 2 3 `ui 1 CPS_PreData 2 5 `uc 1 Check_Interval 1 7 ]
+"25
+[v main@cps_conf cps_conf `[1]S56  1 a 8 10 ]
+"44
+} 0
+"6 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_mTouch.c
+[v _mTouch_Init mTouch_Init `(v  1 e 1 0 ]
+{
+[v mTouch_Init@mTouch_PortInit mTouch_PortInit `*.37(v  1 p 2 0 ]
+[s S56 . 8 `uc 1 CPS_Channel 1 0 `i 1 Threshould_Diff 2 1 `ui 1 CPS_Data 2 3 `ui 1 CPS_PreData 2 5 `uc 1 Check_Interval 1 7 ]
+[v mTouch_Init@cps_config cps_config `*.4S56  1 p 1 2 ]
+[v mTouch_Init@num_of_channel num_of_channel `uc  1 p 1 3 ]
+"31
+} 0
+"95 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
+[v _mTouch_Init_Port mTouch_Init_Port `(v  1 e 1 0 ]
+{
+"99
+} 0
+"60 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_mTouch.c
+[v _mTouch_Check mTouch_Check `(uc  1 e 1 0 ]
+{
+[v mTouch_Check@elements elements `uc  1 a 1 wreg ]
+"64
+[v mTouch_Check@DifferValue DifferValue `i  1 a 2 6 ]
+"60
+[v mTouch_Check@elements elements `uc  1 a 1 wreg ]
+"62
+[v mTouch_Check@elements elements `uc  1 a 1 8 ]
+"72
+} 0
+"37 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_UART.c
+[v _UART_Init UART_Init `(v  1 e 1 0 ]
+{
+[v UART_Init@UART_Init_PORT UART_Init_PORT `*.37(v  1 p 2 1 ]
+[v UART_Init@brg brg `E2328  1 p 1 3 ]
+"57
+} 0
+"81 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
+[v _UART_Init_Port UART_Init_Port `(v  1 e 1 0 ]
+{
+"86
+} 0
+"5 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_Timer0.c
+[v _Timer0_Init Timer0_Init `(v  1 e 1 0 ]
+{
+[v Timer0_Init@pre_val pre_val `E2341  1 a 1 wreg ]
+[v Timer0_Init@pre_val pre_val `E2341  1 a 1 wreg ]
+[v Timer0_Init@reload_val reload_val `uc  1 p 1 0 ]
+"7
+[v Timer0_Init@pre_val pre_val `E2341  1 a 1 2 ]
+"19
+} 0
+"3 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_PWM.c
+[v _PWM_Init PWM_Init `(v  1 e 1 0 ]
+{
+[v PWM_Init@PMW_Init_PORT PMW_Init_PORT `*.37(v  1 p 2 1 ]
+[v PWM_Init@pre_val pre_val `E2341  1 p 1 3 ]
+[v PWM_Init@period period `uc  1 p 1 4 ]
+"16
+} 0
+"88 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
+[v _PWM_Init_Port PWM_Init_Port `(v  1 e 1 0 ]
+{
+"93
+} 0
+"46
+[v _Basic_Init Basic_Init `(v  1 e 1 0 ]
+{
+"61
+} 0
+"63
+[v _Handler Handler `II(v  1 e 1 0 ]
+{
+"65
+[v Handler@Interval Interval `ui  1 s 2 Interval ]
+"78
+} 0
+"33 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_mTouch.c
+[v _mTouch_Scan mTouch_Scan `(v  1 e 1 0 ]
+{
+"35
+[v mTouch_Scan@elements elements `uc  1 s 1 elements ]
+"49
+} 0
+"51
+[v _mTouch_Count1ms mTouch_Count1ms `(v  1 e 1 0 ]
+{
+"53
+[v mTouch_Count1ms@elements elements `uc  1 a 1 2 ]
+"58
+} 0
+"107 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_UART.c
+[v _UART_Interrupt UART_Interrupt `(v  1 e 1 0 ]
+{
+"109
+[v UART_Interrupt@x x `uc  1 a 1 2 ]
+"110
+[v UART_Interrupt@dt dt `uc  1 a 1 1 ]
+"130
+} 0
+"21 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_Timer0.c
+[v _Timer0_CheckFlag Timer0_CheckFlag `(uc  1 e 1 0 ]
+{
+"30
+} 0
