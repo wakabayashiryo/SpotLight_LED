@@ -276,7 +276,7 @@ TMR2_PRESCALER64 3
 "3
 [v _PWM_Init PWM_Init `(v  1 e 1 0 ]
 {
-[v PWM_Init@PMW_Init_PORT PMW_Init_PORT `*.37(v  1 p 2 1 ]
+[v PWM_Init@PWM_Init_PORT PWM_Init_PORT `*.37(v  1 p 2 1 ]
 [v PWM_Init@pre_val pre_val `E2341  1 p 1 3 ]
 [v PWM_Init@period period `uc  1 p 1 4 ]
 "16

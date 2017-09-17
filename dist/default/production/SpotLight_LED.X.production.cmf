@@ -41,7 +41,7 @@ intentry CODE 0 4 4 1F 2
 bssBANK0 BANK0 1 20 20 23 1
 clrtext CODE 0 2EF 2EF 6 2
 bssCOMMON COMMON 1 70 70 5 1
-$/tmp/xcXLuZ3j9.obj
+$/tmp/xcXshhXIg.obj
 reset_vec CODE 0 0 0 1 2
 end_init CODE 0 23 23 1 2
 config CONFIG 0 8007 8007 2 2
@@ -116,23 +116,23 @@ STRING 2FC-7FF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/SpotLight_LED.X.production.obj
-24 cinit CODE >1461:/tmp/xcXi7dhSW
-24 cinit CODE >1464:/tmp/xcXi7dhSW
-24 cinit CODE >1512:/tmp/xcXi7dhSW
-25 cinit CODE >1513:/tmp/xcXi7dhSW
-26 cinit CODE >1514:/tmp/xcXi7dhSW
-27 cinit CODE >1515:/tmp/xcXi7dhSW
-28 cinit CODE >1516:/tmp/xcXi7dhSW
-29 cinit CODE >1520:/tmp/xcXi7dhSW
-2A cinit CODE >1521:/tmp/xcXi7dhSW
-2B cinit CODE >1522:/tmp/xcXi7dhSW
-2C cinit CODE >1523:/tmp/xcXi7dhSW
-2D cinit CODE >1524:/tmp/xcXi7dhSW
-2E cinit CODE >1525:/tmp/xcXi7dhSW
-2F cinit CODE >1531:/tmp/xcXi7dhSW
-2F cinit CODE >1533:/tmp/xcXi7dhSW
-30 cinit CODE >1534:/tmp/xcXi7dhSW
-31 cinit CODE >1535:/tmp/xcXi7dhSW
+24 cinit CODE >1461:/tmp/xcXUbLODv
+24 cinit CODE >1464:/tmp/xcXUbLODv
+24 cinit CODE >1512:/tmp/xcXUbLODv
+25 cinit CODE >1513:/tmp/xcXUbLODv
+26 cinit CODE >1514:/tmp/xcXUbLODv
+27 cinit CODE >1515:/tmp/xcXUbLODv
+28 cinit CODE >1516:/tmp/xcXUbLODv
+29 cinit CODE >1520:/tmp/xcXUbLODv
+2A cinit CODE >1521:/tmp/xcXUbLODv
+2B cinit CODE >1522:/tmp/xcXUbLODv
+2C cinit CODE >1523:/tmp/xcXUbLODv
+2D cinit CODE >1524:/tmp/xcXUbLODv
+2E cinit CODE >1525:/tmp/xcXUbLODv
+2F cinit CODE >1531:/tmp/xcXUbLODv
+2F cinit CODE >1533:/tmp/xcXUbLODv
+30 cinit CODE >1534:/tmp/xcXUbLODv
+31 cinit CODE >1535:/tmp/xcXUbLODv
 4 intentry CODE >86:/home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
 9 intentry CODE >90:/home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
 D intentry CODE >92:/home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
@@ -281,14 +281,14 @@ FF maintext CODE >49:/home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X
 100 maintext CODE >52:/home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
 102 maintext CODE >54:/home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
 113 maintext CODE >41:/home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
-2EF clrtext CODE >1501:/tmp/xcXi7dhSW
-2EF clrtext CODE >1502:/tmp/xcXi7dhSW
-2F0 clrtext CODE >1503:/tmp/xcXi7dhSW
-2F0 clrtext CODE >1504:/tmp/xcXi7dhSW
-2F1 clrtext CODE >1505:/tmp/xcXi7dhSW
-2F2 clrtext CODE >1506:/tmp/xcXi7dhSW
-2F3 clrtext CODE >1507:/tmp/xcXi7dhSW
-2F4 clrtext CODE >1508:/tmp/xcXi7dhSW
+2EF clrtext CODE >1501:/tmp/xcXUbLODv
+2EF clrtext CODE >1502:/tmp/xcXUbLODv
+2F0 clrtext CODE >1503:/tmp/xcXUbLODv
+2F0 clrtext CODE >1504:/tmp/xcXUbLODv
+2F1 clrtext CODE >1505:/tmp/xcXUbLODv
+2F2 clrtext CODE >1506:/tmp/xcXUbLODv
+2F3 clrtext CODE >1507:/tmp/xcXUbLODv
+2F4 clrtext CODE >1508:/tmp/xcXUbLODv
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -326,10 +326,10 @@ _TMR1 16 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
 _TMR2 1A 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
 _TXIF 8C 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
 _WPUA 20C 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcXLuZ3j9.obj
+___sp 0 0 STACK 2 stack /tmp/xcXshhXIg.obj
 _main 154 0 CODE 0 maintext dist/default/production/SpotLight_LED.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
-start 46 0 CODE 0 init /tmp/xcXLuZ3j9.obj
+start 46 0 CODE 0 init /tmp/xcXshhXIg.obj
 mTouch_Init@num_of_channel 46 0 BANK0 1 cstackBANK0 dist/default/production/SpotLight_LED.X.production.obj
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
@@ -337,12 +337,12 @@ __size_of_UART_Interrupt 0 0 ABS 0 - dist/default/production/SpotLight_LED.X.pro
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __size_of_mTouch_Check 0 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab /tmp/xcXLuZ3j9.obj
-intlevel1 0 0 ENTRY 0 functab /tmp/xcXLuZ3j9.obj
-intlevel2 0 0 ENTRY 0 functab /tmp/xcXLuZ3j9.obj
-intlevel3 0 0 ENTRY 0 functab /tmp/xcXLuZ3j9.obj
-intlevel4 0 0 ENTRY 0 functab /tmp/xcXLuZ3j9.obj
-intlevel5 0 0 ENTRY 0 functab /tmp/xcXLuZ3j9.obj
+intlevel0 0 0 ENTRY 0 functab /tmp/xcXshhXIg.obj
+intlevel1 0 0 ENTRY 0 functab /tmp/xcXshhXIg.obj
+intlevel2 0 0 ENTRY 0 functab /tmp/xcXshhXIg.obj
+intlevel3 0 0 ENTRY 0 functab /tmp/xcXshhXIg.obj
+intlevel4 0 0 ENTRY 0 functab /tmp/xcXshhXIg.obj
+intlevel5 0 0 ENTRY 0 functab /tmp/xcXshhXIg.obj
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
 __size_of_Timer0_Init 0 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
@@ -361,7 +361,6 @@ __Lmaintext 0 0 ABS 0 maintext -
 __LnvBANK0 0 0 ABS 0 nvBANK0 -
 __end_of_mTouch_Init 3E4 0 CODE 0 text1 dist/default/production/SpotLight_LED.X.production.obj
 __end_of_mTouch_Scan 2CC 0 CODE 0 text12 dist/default/production/SpotLight_LED.X.production.obj
-PWM_Init@PMW_Init_PORT 44 0 BANK0 1 cstackBANK0 dist/default/production/SpotLight_LED.X.production.obj
 mTouch_Check@DifferValue 49 0 BANK0 1 cstackBANK0 dist/default/production/SpotLight_LED.X.production.obj
 _OPTION_REG 95 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
 _dpowers 5B6 0 STRCODE 0 stringtext2 dist/default/production/SpotLight_LED.X.production.obj
@@ -380,7 +379,7 @@ __pcstackBANK0 43 0 BANK0 1 cstackBANK0 dist/default/production/SpotLight_LED.X.
 _T1GCON 19 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
 _TMR0IE 5D 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
 _TMR0IF 5A 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcXLuZ3j9.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcXshhXIg.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 BANK2 1 bank2 -
@@ -538,7 +537,7 @@ _Timer0_CheckFlag 5A0 0 CODE 0 text15 dist/default/production/SpotLight_LED.X.pr
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 8 0 CODE 0 intentry -
 PWM_SetDuty@duty 43 0 BANK0 1 cstackBANK0 dist/default/production/SpotLight_LED.X.production.obj
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcXLuZ3j9.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcXshhXIg.obj
 mTouch_Count1ms@elements 77 0 COMMON 1 cstackCOMMON dist/default/production/SpotLight_LED.X.production.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __end_of_PWM_SetDuty 4C0 0 CODE 0 text7 dist/default/production/SpotLight_LED.X.production.obj
@@ -590,8 +589,8 @@ _config_ptr 72 0 COMMON 1 bssCOMMON dist/default/production/SpotLight_LED.X.prod
 __end_of_mTouch_Count1ms 394 0 CODE 0 text13 dist/default/production/SpotLight_LED.X.production.obj
 __size_of_Basic_Init 0 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
 __size_of_PWM_Init_Port 0 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
-stackhi 206F 0 ABS 0 - /tmp/xcXLuZ3j9.obj
-stacklo 2037 0 ABS 0 - /tmp/xcXLuZ3j9.obj
+stackhi 206F 0 ABS 0 - /tmp/xcXshhXIg.obj
+stacklo 2037 0 ABS 0 - /tmp/xcXshhXIg.obj
 mTouch_Scan@elements 70 0 COMMON 1 bssCOMMON dist/default/production/SpotLight_LED.X.production.obj
 PWM_Init@period 47 0 BANK0 1 cstackBANK0 dist/default/production/SpotLight_LED.X.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
@@ -683,6 +682,7 @@ __initialization 48 0 CODE 0 cinit dist/default/production/SpotLight_LED.X.produ
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
 __size_of_mTouch_Count1ms 0 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production/SpotLight_LED.X.production.obj
+PWM_Init@PWM_Init_PORT 44 0 BANK0 1 cstackBANK0 dist/default/production/SpotLight_LED.X.production.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production/SpotLight_LED.X.production.obj
 _TMR0_ReloadTemp 56 0 BANK0 1 nvBANK0 dist/default/production/SpotLight_LED.X.production.obj
 _mTouch_Check 64 0 CODE 0 text3 dist/default/production/SpotLight_LED.X.production.obj

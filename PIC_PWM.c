@@ -1,8 +1,8 @@
 #include "PIC_PWM.h"
 
-void PWM_Init(PWM_Init_PORTTypedef PMW_Init_PORT,TMR2_PRESCALER_VAL pre_val,uint8_t period)
+void PWM_Init(PWM_Init_PORTTypedef PWM_Init_PORT,TMR2_PRESCALER_VAL pre_val,uint8_t period)
 {
-    PMW_Init_PORT();
+    PWM_Init_PORT();
     
     PR2 = period;                   //Set Period Register
     TMR2 = 0x00;                    //Clear 

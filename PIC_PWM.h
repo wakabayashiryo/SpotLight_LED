@@ -23,7 +23,7 @@ typedef enum
 
 typedef void (*PWM_Init_PORTTypedef)(void);
 
-void PWM_Init(PWM_Init_PORTTypedef PMW_Init_PORT,TMR2_PRESCALER_VAL pre_val,uint8_t period);
+void PWM_Init(PWM_Init_PORTTypedef PWM_Init_PORT,TMR2_PRESCALER_VAL pre_val,uint8_t period);
 #define PWM_Start()    CCP1CON |=  (3<<2);     //CCP module is PWM mode and start 
 #define PWM_Stop()     CCP1CON &= ~(3<<2);     //CCP module is PWM mode and stop
 void PWM_SetDuty(uint16_t duty);

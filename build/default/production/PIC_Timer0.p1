@@ -2252,7 +2252,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;PIC_PWM.h: 21: TMR2_PRESCALER64 = 3,
 [; ;PIC_PWM.h: 22: }TMR2_PRESCALER_VAL;
 [; ;PIC_PWM.h: 24: typedef void (*PWM_Init_PORTTypedef)(void);
-[; ;PIC_PWM.h: 26: void PWM_Init(PWM_Init_PORTTypedef PMW_Init_PORT,TMR2_PRESCALER_VAL pre_val,uint8_t period);
+[; ;PIC_PWM.h: 26: void PWM_Init(PWM_Init_PORTTypedef PWM_Init_PORT,TMR2_PRESCALER_VAL pre_val,uint8_t period);
 [; ;PIC_PWM.h: 29: void PWM_SetDuty(uint16_t duty);
 [; ;PIC_mTouch.h: 17: typedef struct
 [; ;PIC_mTouch.h: 18: {

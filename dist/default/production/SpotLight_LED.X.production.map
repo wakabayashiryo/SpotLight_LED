@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=/opt/microchip/xc8/v1.43/dat/en_msgs.txt -cs \
   -h+dist/default/production/SpotLight_LED.X.production.sym \
   --cmf=dist/default/production/SpotLight_LED.X.production.cmf -z -Q12F1822 \
-  -o/tmp/xcXuVUp9X -Mdist/default/production/SpotLight_LED.X.production.map \
+  -o/tmp/xcX1AgNQe -Mdist/default/production/SpotLight_LED.X.production.map \
   -E1 -ver=XC8 -ASTACK=02037h-0206fh -pstack=STACK -ACODE=00h-07FFh \
   -ASTRCODE=00h-07FFh -ASTRING=00h-0FFhx8 -ACONST=00h-0FFhx8 \
   -AENTRY=00h-0FFhx8 -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0BFh \
@@ -25,7 +25,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=08007h-08008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/0F000h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k /tmp/xcXLuZ3j9.obj \
+  -DENTRY=2 -k /tmp/xcXshhXIg.obj \
   dist/default/production/SpotLight_LED.X.production.obj 
 
 Object code version is 3.11
@@ -35,7 +35,7 @@ Machine type is 12F1822
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXLuZ3j9.obj
+/tmp/xcXshhXIg.obj
                 end_init                             23       23        1        8       0
                 reset_vec                             0        0        1        0       0
                 config                             8007     8007        2    1000E       0
@@ -336,7 +336,7 @@ UNUSED ADDRESS RANGES
                                   Symbol Table
 
 Handler@Interval            bssBANK0     00040
-PWM_Init@PMW_Init_PORT      cstackBANK0  00044
+PWM_Init@PWM_Init_PORT      cstackBANK0  00044
 PWM_Init@period             cstackBANK0  00047
 PWM_Init@pre_val            cstackBANK0  00046
 PWM_SetDuty@RegTemp         cstackBANK0  00047
@@ -983,7 +983,7 @@ Total ram usage:        5 bytes
  Defined at:
 		line 3 in file "PIC_PWM.c"
  Parameters:    Size  Location     Type
-  PMW_Init_POR    2    1[BANK0 ] PTR FTN()void 
+  PWM_Init_POR    2    1[BANK0 ] PTR FTN()void 
 		 -> PWM_Init_Port(1), 
   pre_val         1    3[BANK0 ] enum E2341
   period          1    4[BANK0 ] unsigned char 

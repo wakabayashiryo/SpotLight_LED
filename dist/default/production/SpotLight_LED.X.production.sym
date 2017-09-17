@@ -32,7 +32,6 @@ __end_of_mTouch_Init 1F2 0 CODE 0
 start 23 0 CODE 0
 _BRG16 CFB 0 ABS 0
 _LATA5 865 0 ABS 0
-PWM_Init@PMW_Init_PORT 44 0 BANK0 1
 _RCREG 199 0 ABS 0
 _TRISA 8C 0 ABS 0
 _RCSTA 19D 0 ABS 0
@@ -361,6 +360,7 @@ intlevel5 0 0 ENTRY 0
 _mTouch_Scan 114 0 CODE 0
 _UART_Init_Port 29A 0 CODE 0
 mTouch_Check@DifferValue 49 0 BANK0 1
+PWM_Init@PWM_Init_PORT 44 0 BANK0 1
 _PWM_SetDuty 240 0 CODE 0
 __HcstackCOMMON 0 0 ABS 0
 __LcstackCOMMON 0 0 ABS 0
@@ -400,7 +400,7 @@ clrtext 5DE 5F3 CODE 5DE 0
 stringtext6 5F4 5F7 STRCODE 5F4 0
 %locals
 dist/default/production/SpotLight_LED.X.production.obj
-/tmp/xcXi7dhSW
+/tmp/xcXUbLODv
 1461 24 0 CODE 0
 1464 24 0 CODE 0
 1512 24 0 CODE 0
