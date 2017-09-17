@@ -3145,6 +3145,11 @@ uint8_t mTouch_Check(uint8_t elements);
 void mTouch_Display_Config(void);
 
 # 10 "main.c"
+static const uint16_t Blightness[] = {
+0,255,511,767,1023
+};
+static uint8_t elements;
+
 void Basic_Init(void);
 
 void UART_Init_Port(void);
@@ -3154,6 +3159,8 @@ void mTouch_Init_Port(void);
 void main(void)
 {
 Basic_Init();
+
+LATA5 = 1;
 
 Timer0_Init(TMR0_PRESCALER64,125);
 
@@ -3167,14 +3174,27 @@ mTouch_Init(mTouch_Init_Port,cps_conf,1);
 
 UART_Init(UART_Init_Port,BAUD_9600);
 
+_delay((unsigned long)((100)*(32000000/4000.0)));
+
 while(1)
 {
-
 if(mTouch_Check(0))
-LATA5 = 1;;
+{
+if(++elements>4)
+{
+LATA5 = 1;
+elements = 0;
+}
+else
+{
+LATA5 = 0;
+}
+PWM_SetDuty(Blightness[elements]);
 }
 
-# 44
+}
+
+# 67
 }
 
 void Basic_Init(void)

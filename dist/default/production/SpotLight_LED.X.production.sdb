@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 12F1822 ]
 [d frameptr 6 ]
-"20 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
+"27 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
 [e E2319 . `uc
 TMR0_PRESCALER2 0
 TMR0_PRESCALER4 1
@@ -14,14 +14,14 @@ TMR0_PRESCALER64 5
 TMR0_PRESCALER128 6
 TMR0_PRESCALER256 7
 ]
-"22
+"29
 [e E2304 . `uc
 TMR2_PRESCALER1 0
 TMR2_PRESCALER4 1
 TMR2_PRESCALER16 2
 TMR2_PRESCALER64 3
 ]
-"30
+"37
 [e E2276 . `uc
 BAUD_300 0
 BAUD_1200 1
@@ -79,17 +79,17 @@ TMR2_PRESCALER64 3
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"16 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
+"21 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
 [v _main main `(v  1 e 1 0 ]
-"46
+"69
 [v _Basic_Init Basic_Init `(v  1 e 1 0 ]
-"63
+"86
 [v _Handler Handler `II(v  1 e 1 0 ]
-"81
+"104
 [v _UART_Init_Port UART_Init_Port `(v  1 e 1 0 ]
-"88
+"111
 [v _PWM_Init_Port PWM_Init_Port `(v  1 e 1 0 ]
-"95
+"118
 [v _mTouch_Init_Port mTouch_Init_Port `(v  1 e 1 0 ]
 "6 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_mTouch.c
 [v _mTouch_Init mTouch_Init `(v  1 e 1 0 ]
@@ -101,6 +101,8 @@ TMR2_PRESCALER64 3
 [v _mTouch_Check mTouch_Check `(uc  1 e 1 0 ]
 "3 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_PWM.c
 [v _PWM_Init PWM_Init `(v  1 e 1 0 ]
+"18
+[v _PWM_SetDuty PWM_SetDuty `(v  1 e 1 0 ]
 "5 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_Timer0.c
 [v _Timer0_Init Timer0_Init `(v  1 e 1 0 ]
 "21
@@ -187,9 +189,13 @@ TMR2_PRESCALER64 3
 [v _TXIF TXIF `VEb  1 e 0 @140 ]
 "354 /opt/microchip/xc8/v1.43/sources/common/doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
-[s S56 . 8 `uc 1 CPS_Channel 1 0 `i 1 Threshould_Diff 2 1 `ui 1 CPS_Data 2 3 `ui 1 CPS_PreData 2 5 `uc 1 Check_Interval 1 7 ]
+"10 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
+[v _Blightness Blightness `DC[5]ui  1 s 10 Blightness ]
+"13
+[v _elements elements `uc  1 s 1 elements ]
+[s S57 . 8 `uc 1 CPS_Channel 1 0 `i 1 Threshould_Diff 2 1 `ui 1 CPS_Data 2 3 `ui 1 CPS_PreData 2 5 `uc 1 Check_Interval 1 7 ]
 "3 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_mTouch.c
-[v _config_ptr config_ptr `*.4S56  1 s 1 config_ptr ]
+[v _config_ptr config_ptr `*.4S57  1 s 1 config_ptr ]
 "4
 [v _using_channel using_channel `uc  1 s 1 using_channel ]
 "3 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_Timer0.c
@@ -202,27 +208,27 @@ TMR2_PRESCALER64 3
 [v _UART_Buffer_outptr UART_Buffer_outptr `uc  1 s 1 UART_Buffer_outptr ]
 "13
 [v _baudtable baudtable `DC[8]ui  1 s 16 baudtable ]
-"16 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
+"21 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-[s S56 . 8 `uc 1 CPS_Channel 1 0 `i 1 Threshould_Diff 2 1 `ui 1 CPS_Data 2 3 `ui 1 CPS_PreData 2 5 `uc 1 Check_Interval 1 7 ]
-"25
-[v main@cps_conf cps_conf `[1]S56  1 a 8 10 ]
-"44
+[s S57 . 8 `uc 1 CPS_Channel 1 0 `i 1 Threshould_Diff 2 1 `ui 1 CPS_Data 2 3 `ui 1 CPS_PreData 2 5 `uc 1 Check_Interval 1 7 ]
+"32
+[v main@cps_conf cps_conf `[1]S57  1 a 8 11 ]
+"67
 } 0
 "6 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_mTouch.c
 [v _mTouch_Init mTouch_Init `(v  1 e 1 0 ]
 {
 [v mTouch_Init@mTouch_PortInit mTouch_PortInit `*.37(v  1 p 2 0 ]
-[s S56 . 8 `uc 1 CPS_Channel 1 0 `i 1 Threshould_Diff 2 1 `ui 1 CPS_Data 2 3 `ui 1 CPS_PreData 2 5 `uc 1 Check_Interval 1 7 ]
-[v mTouch_Init@cps_config cps_config `*.4S56  1 p 1 2 ]
+[s S57 . 8 `uc 1 CPS_Channel 1 0 `i 1 Threshould_Diff 2 1 `ui 1 CPS_Data 2 3 `ui 1 CPS_PreData 2 5 `uc 1 Check_Interval 1 7 ]
+[v mTouch_Init@cps_config cps_config `*.4S57  1 p 1 2 ]
 [v mTouch_Init@num_of_channel num_of_channel `uc  1 p 1 3 ]
 "31
 } 0
-"95 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
+"118 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
 [v _mTouch_Init_Port mTouch_Init_Port `(v  1 e 1 0 ]
 {
-"99
+"122
 } 0
 "60 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_mTouch.c
 [v _mTouch_Check mTouch_Check `(uc  1 e 1 0 ]
@@ -243,10 +249,10 @@ TMR2_PRESCALER64 3
 [v UART_Init@brg brg `E2328  1 p 1 3 ]
 "57
 } 0
-"81 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
+"104 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
 [v _UART_Init_Port UART_Init_Port `(v  1 e 1 0 ]
 {
-"86
+"109
 } 0
 "5 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_Timer0.c
 [v _Timer0_Init Timer0_Init `(v  1 e 1 0 ]
@@ -258,7 +264,16 @@ TMR2_PRESCALER64 3
 [v Timer0_Init@pre_val pre_val `E2341  1 a 1 2 ]
 "19
 } 0
-"3 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_PWM.c
+"18 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_PWM.c
+[v _PWM_SetDuty PWM_SetDuty `(v  1 e 1 0 ]
+{
+"20
+[v PWM_SetDuty@RegTemp RegTemp `uc  1 a 1 4 ]
+"18
+[v PWM_SetDuty@duty duty `ui  1 p 2 0 ]
+"24
+} 0
+"3
 [v _PWM_Init PWM_Init `(v  1 e 1 0 ]
 {
 [v PWM_Init@PMW_Init_PORT PMW_Init_PORT `*.37(v  1 p 2 1 ]
@@ -266,22 +281,22 @@ TMR2_PRESCALER64 3
 [v PWM_Init@period period `uc  1 p 1 4 ]
 "16
 } 0
-"88 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
+"111 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/main.c
 [v _PWM_Init_Port PWM_Init_Port `(v  1 e 1 0 ]
 {
-"93
+"116
 } 0
-"46
+"69
 [v _Basic_Init Basic_Init `(v  1 e 1 0 ]
 {
-"61
+"84
 } 0
-"63
+"86
 [v _Handler Handler `II(v  1 e 1 0 ]
 {
-"65
+"88
 [v Handler@Interval Interval `ui  1 s 2 Interval ]
-"78
+"101
 } 0
 "33 /home/evaota/MPLABXProjects/Product_project/SpotLight_LED.X/PIC_mTouch.c
 [v _mTouch_Scan mTouch_Scan `(v  1 e 1 0 ]

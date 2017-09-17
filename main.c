@@ -7,6 +7,11 @@
 
 #include "main.h"
 
+static const uint16_t Blightness[] = {
+  0,255,511,767,1023  
+};
+static uint8_t elements;
+
 void Basic_Init(void);
 
 void UART_Init_Port(void);
@@ -17,6 +22,8 @@ void main(void)
 {
     Basic_Init();
     
+    LATA5 = 1;
+            
     Timer0_Init(TMR0_PRESCALER64,125);//set interrupt time is 1ms
 
     PWM_Init(PWM_Init_Port,TMR2_PRESCALER4,0xFF);
@@ -29,13 +36,29 @@ void main(void)
     
     UART_Init(UART_Init_Port,BAUD_9600);
     
+    __delay_ms(100);
+    
     while(1)
     {
-//        mTouch_Display_Config();
         if(mTouch_Check(0))
-            LATA5 = 1;;
+        {
+            if(++elements>4)
+            {
+                LATA5 = 1;
+                elements = 0;
+            }
+            else
+            {
+                LATA5 = 0;
+            }
+            PWM_SetDuty(Blightness[elements]);
+        }
+        
     }
-//        for(uint16_t i=0;i<0x03FF;i++)
+    
+//        mTouch_Display_Config();
+
+    //        for(uint16_t i=0;i<0x03FF;i++)
 //        {
 //            PWM_SetDuty(i);
 //            __delay_ms(10);

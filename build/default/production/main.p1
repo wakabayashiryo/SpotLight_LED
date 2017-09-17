@@ -1,19 +1,21 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
-"10 main.c
+"15 main.c
 [v _Basic_Init `(v ~T0 @X0 0 ef ]
-"20
+"5386 /opt/microchip/xc8/v1.43/include/pic12f1822.h
+[v _LATA5 `Vb ~T0 @X0 0 e@2149 ]
+"27 main.c
 [c E2319 0 1 2 3 4 5 6 7 .. ]
 [n E2319 . TMR0_PRESCALER2 TMR0_PRESCALER4 TMR0_PRESCALER8 TMR0_PRESCALER16 TMR0_PRESCALER32 TMR0_PRESCALER64 TMR0_PRESCALER128 TMR0_PRESCALER256  ]
 "29 PIC_Timer0.h
 [v _Timer0_Init `(v ~T0 @X0 0 ef2`E2319`uc ]
 [v F2311 `(v ~T0 @X0 0 tf ]
-"22 main.c
+"29 main.c
 [c E2304 0 1 2 3 .. ]
 [n E2304 . TMR2_PRESCALER1 TMR2_PRESCALER4 TMR2_PRESCALER16 TMR2_PRESCALER64  ]
 "26 PIC_PWM.h
 [v _PWM_Init `(v ~T0 @X0 0 ef3`*F2311`E2304`uc ]
-"13 main.c
+"18 main.c
 [v _PWM_Init_Port `(v ~T0 @X0 0 ef ]
 "3975 /opt/microchip/xc8/v1.43/include/pic12f1822.h
 [v _CCP1CON `Vuc ~T0 @X0 0 e@659 ]
@@ -23,21 +25,25 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v F2342 `(v ~T0 @X0 0 tf ]
 "32
 [v _mTouch_Init `(v ~T0 @X0 0 ef3`*F2342`*S270`uc ]
-"14 main.c
+"19 main.c
 [v _mTouch_Init_Port `(v ~T0 @X0 0 ef ]
 [v F2287 `(v ~T0 @X0 0 tf ]
-"30
+"37
 [c E2276 0 1 2 3 4 5 6 7 .. ]
 [n E2276 . BAUD_300 BAUD_1200 BAUD_2400 BAUD_9600 BAUD_10417 BAUD_19_2K BAUD_57_6K BAUD_115_2K  ]
 "28 PIC_UART.h
 [v _UART_Init `(v ~T0 @X0 0 ef2`*F2287`E2276 ]
-"12 main.c
+"17 main.c
 [v _UART_Init_Port `(v ~T0 @X0 0 ef ]
+[v F2176 `(v ~T0 @X0 1 tf1`ul ]
+"152 /opt/microchip/xc8/v1.43/include/pic.h
+[v __delay `JF2176 ~T0 @X0 0 e ]
+[p i __delay ]
 "36 PIC_mTouch.h
 [v _mTouch_Check `(uc ~T0 @X0 0 ef1`uc ]
-"5386 /opt/microchip/xc8/v1.43/include/pic12f1822.h
-[v _LATA5 `Vb ~T0 @X0 0 e@2149 ]
-"1643
+"29 PIC_PWM.h
+[v _PWM_SetDuty `(v ~T0 @X0 0 ef1`ui ]
+"1643 /opt/microchip/xc8/v1.43/include/pic12f1822.h
 [v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
 "1240
 [v _TRISA `Vuc ~T0 @X0 0 e@140 ]
@@ -2324,209 +2330,269 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;PIC_mTouch.h: 35: void mTouch_Count1ms(void);
 [; ;PIC_mTouch.h: 36: uint8_t mTouch_Check(uint8_t elements);
 [; ;PIC_mTouch.h: 38: void mTouch_Display_Config(void);
-[; ;main.c: 10: void Basic_Init(void);
-[; ;main.c: 12: void UART_Init_Port(void);
-[; ;main.c: 13: void PWM_Init_Port(void);
-[; ;main.c: 14: void mTouch_Init_Port(void);
+"10 main.c
+[v _Blightness `Cui ~T0 @X0 -> 0 `x s ]
+[i _Blightness
+:U ..
+"11
+-> -> 0 `i `ui
+-> -> 255 `i `ui
+-> -> 511 `i `ui
+-> -> 767 `i `ui
+"12
+-> -> 1023 `i `ui
+..
+]
+[; ;main.c: 10: static const uint16_t Blightness[] = {
+[; ;main.c: 11: 0,255,511,767,1023
+[; ;main.c: 12: };
+"13
+[v _elements `uc ~T0 @X0 1 s ]
+[; ;main.c: 13: static uint8_t elements;
+[; ;main.c: 15: void Basic_Init(void);
+[; ;main.c: 17: void UART_Init_Port(void);
+[; ;main.c: 18: void PWM_Init_Port(void);
+[; ;main.c: 19: void mTouch_Init_Port(void);
 [v $root$_main `(v ~T0 @X0 0 e ]
-"16 main.c
+"21
 [v _main `(v ~T0 @X0 1 ef ]
-"17
+"22
 {
-[; ;main.c: 16: void main(void)
-[; ;main.c: 17: {
+[; ;main.c: 21: void main(void)
+[; ;main.c: 22: {
 [e :U _main ]
 [f ]
-[; ;main.c: 18: Basic_Init();
-"18
-[e ( _Basic_Init ..  ]
-[; ;main.c: 20: Timer0_Init(TMR0_PRESCALER64,125);
-"20
-[e ( _Timer0_Init (2 , . `E2319 5 -> -> 125 `i `uc ]
-[; ;main.c: 22: PWM_Init(PWM_Init_Port,TMR2_PRESCALER4,0xFF);
-"22
-[e ( _PWM_Init (3 , , &U _PWM_Init_Port . `E2304 1 -> -> 255 `i `uc ]
-[; ;main.c: 23: CCP1CON |= (3<<2);;
+[; ;main.c: 23: Basic_Init();
 "23
-[e =| _CCP1CON -> << -> 3 `i -> 2 `i `uc ]
+[e ( _Basic_Init ..  ]
+[; ;main.c: 25: LATA5 = 1;
 "25
-[v _cps_conf `S270 ~T0 @X0 -> -> 1 `i `ux a ]
-[; ;main.c: 25: CPS_CHANNELCONFIG cps_conf[1];
-[; ;main.c: 26: cps_conf[0].CPS_Channel = 0;
-"26
-[e = . *U + &U _cps_conf * -> -> -> 0 `i `ui `ux -> -> # *U &U _cps_conf `ui `ux 0 -> -> 0 `i `uc ]
-[; ;main.c: 27: cps_conf[0].Threshould_Diff = 1000;
-"27
-[e = . *U + &U _cps_conf * -> -> -> 0 `i `ui `ux -> -> # *U &U _cps_conf `ui `ux 1 -> 1000 `i ]
-[; ;main.c: 28: mTouch_Init(mTouch_Init_Port,cps_conf,1);
-"28
-[e ( _mTouch_Init (3 , , &U _mTouch_Init_Port &U _cps_conf -> -> 1 `i `uc ]
-[; ;main.c: 30: UART_Init(UART_Init_Port,BAUD_9600);
-"30
-[e ( _UART_Init (2 , &U _UART_Init_Port . `E2276 3 ]
-[; ;main.c: 32: while(1)
-"32
-[e :U 273 ]
-[; ;main.c: 33: {
-"33
-{
-[; ;main.c: 35: if(mTouch_Check(0))
-"35
-[e $ ! != -> ( _mTouch_Check (1 -> -> 0 `i `uc `i -> -> -> 0 `i `uc `i 275  ]
-[; ;main.c: 36: LATA5 = 1;;
-"36
 [e = _LATA5 -> -> 1 `i `b ]
-[e :U 275 ]
+[; ;main.c: 27: Timer0_Init(TMR0_PRESCALER64,125);
+"27
+[e ( _Timer0_Init (2 , . `E2319 5 -> -> 125 `i `uc ]
+[; ;main.c: 29: PWM_Init(PWM_Init_Port,TMR2_PRESCALER4,0xFF);
+"29
+[e ( _PWM_Init (3 , , &U _PWM_Init_Port . `E2304 1 -> -> 255 `i `uc ]
+[; ;main.c: 30: CCP1CON |= (3<<2);;
+"30
+[e =| _CCP1CON -> << -> 3 `i -> 2 `i `uc ]
+"32
+[v _cps_conf `S270 ~T0 @X0 -> -> 1 `i `ux a ]
+[; ;main.c: 32: CPS_CHANNELCONFIG cps_conf[1];
+[; ;main.c: 33: cps_conf[0].CPS_Channel = 0;
+"33
+[e = . *U + &U _cps_conf * -> -> -> 0 `i `ui `ux -> -> # *U &U _cps_conf `ui `ux 0 -> -> 0 `i `uc ]
+[; ;main.c: 34: cps_conf[0].Threshould_Diff = 1000;
+"34
+[e = . *U + &U _cps_conf * -> -> -> 0 `i `ui `ux -> -> # *U &U _cps_conf `ui `ux 1 -> 1000 `i ]
+[; ;main.c: 35: mTouch_Init(mTouch_Init_Port,cps_conf,1);
+"35
+[e ( _mTouch_Init (3 , , &U _mTouch_Init_Port &U _cps_conf -> -> 1 `i `uc ]
+[; ;main.c: 37: UART_Init(UART_Init_Port,BAUD_9600);
 "37
+[e ( _UART_Init (2 , &U _UART_Init_Port . `E2276 3 ]
+[; ;main.c: 39: _delay((unsigned long)((100)*(32000000/4000.0)));
+"39
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 41: while(1)
+"41
+[e :U 273 ]
+[; ;main.c: 42: {
+"42
+{
+[; ;main.c: 43: if(mTouch_Check(0))
+"43
+[e $ ! != -> ( _mTouch_Check (1 -> -> 0 `i `uc `i -> -> -> 0 `i `uc `i 275  ]
+[; ;main.c: 44: {
+"44
+{
+[; ;main.c: 45: if(++elements>4)
+"45
+[e $ ! > -> =+ _elements -> -> 1 `i `uc `i -> 4 `i 276  ]
+[; ;main.c: 46: {
+"46
+{
+[; ;main.c: 47: LATA5 = 1;
+"47
+[e = _LATA5 -> -> 1 `i `b ]
+[; ;main.c: 48: elements = 0;
+"48
+[e = _elements -> -> 0 `i `uc ]
+"49
+}
+[; ;main.c: 49: }
+[e $U 277  ]
+"50
+[e :U 276 ]
+[; ;main.c: 50: else
+[; ;main.c: 51: {
+"51
+{
+[; ;main.c: 52: LATA5 = 0;
+"52
+[e = _LATA5 -> -> 0 `i `b ]
+"53
+}
+[e :U 277 ]
+[; ;main.c: 53: }
+[; ;main.c: 54: PWM_SetDuty(Blightness[elements]);
+"54
+[e ( _PWM_SetDuty (1 *U + &U _Blightness * -> _elements `ux -> -> # *U &U _Blightness `ui `ux ]
+"55
+}
+[e :U 275 ]
+"57
 }
 [e :U 272 ]
-"32
+"41
 [e $U 273  ]
 [e :U 274 ]
-[; ;main.c: 37: }
-[; ;main.c: 44: }
-"44
+[; ;main.c: 55: }
+[; ;main.c: 57: }
+[; ;main.c: 67: }
+"67
 [e :UE 271 ]
 }
-"46
+"69
 [v _Basic_Init `(v ~T0 @X0 1 ef ]
-"47
+"70
 {
-[; ;main.c: 46: void Basic_Init(void)
-[; ;main.c: 47: {
+[; ;main.c: 69: void Basic_Init(void)
+[; ;main.c: 70: {
 [e :U _Basic_Init ]
 [f ]
-[; ;main.c: 48: OSCCON = 0xF0;
-"48
+[; ;main.c: 71: OSCCON = 0xF0;
+"71
 [e = _OSCCON -> -> 240 `i `uc ]
-[; ;main.c: 52: TRISA = 0x00;
-"52
+[; ;main.c: 75: TRISA = 0x00;
+"75
 [e = _TRISA -> -> 0 `i `uc ]
-[; ;main.c: 53: ANSELA = 0x00;
-"53
+[; ;main.c: 76: ANSELA = 0x00;
+"76
 [e = _ANSELA -> -> 0 `i `uc ]
-[; ;main.c: 54: WPUA = 0x00;
-"54
+[; ;main.c: 77: WPUA = 0x00;
+"77
 [e = _WPUA -> -> 0 `i `uc ]
-[; ;main.c: 57: APFCON = 0x00;
-"57
+[; ;main.c: 80: APFCON = 0x00;
+"80
 [e = _APFCON -> -> 0 `i `uc ]
-[; ;main.c: 59: PORTA = 0x00;
-"59
+[; ;main.c: 82: PORTA = 0x00;
+"82
 [e = _PORTA -> -> 0 `i `uc ]
-[; ;main.c: 61: }
-"61
-[e :UE 276 ]
+[; ;main.c: 84: }
+"84
+[e :UE 278 ]
 }
 [v $root$_Handler `(v ~T0 @X0 0 e ]
-[v F2373 `(v ~T0 @X0 1 tf ]
-"63
-[v _Handler `IF2373 ~T0 @X0 1 e ]
-"64
+[v F2376 `(v ~T0 @X0 1 tf ]
+"86
+[v _Handler `IF2376 ~T0 @X0 1 e ]
+"87
 {
-[; ;main.c: 63: void interrupt Handler(void)
-[; ;main.c: 64: {
+[; ;main.c: 86: void interrupt Handler(void)
+[; ;main.c: 87: {
 [e :U _Handler ]
 [f ]
-"65
-[v F2374 `ui ~T0 @X0 1 s Interval ]
-[i F2374
+"88
+[v F2377 `ui ~T0 @X0 1 s Interval ]
+[i F2377
 -> -> 0 `i `ui
 ]
-[; ;main.c: 65: static uint16_t Interval = 0;
-[; ;main.c: 67: if(Timer0_CheckFlag())
-"67
-[e $ ! != -> ( _Timer0_CheckFlag ..  `i -> -> -> 0 `i `uc `i 278  ]
-[; ;main.c: 68: {
-"68
+[; ;main.c: 88: static uint16_t Interval = 0;
+[; ;main.c: 90: if(Timer0_CheckFlag())
+"90
+[e $ ! != -> ( _Timer0_CheckFlag ..  `i -> -> -> 0 `i `uc `i 280  ]
+[; ;main.c: 91: {
+"91
 {
-[; ;main.c: 69: mTouch_Count1ms();
-"69
+[; ;main.c: 92: mTouch_Count1ms();
+"92
 [e ( _mTouch_Count1ms ..  ]
-[; ;main.c: 71: if(++Interval>30)
-"71
-[e $ ! > =+ F2374 -> -> 1 `i `ui -> -> 30 `i `ui 279  ]
-[; ;main.c: 72: {
-"72
+[; ;main.c: 94: if(++Interval>30)
+"94
+[e $ ! > =+ F2377 -> -> 1 `i `ui -> -> 30 `i `ui 281  ]
+[; ;main.c: 95: {
+"95
 {
-[; ;main.c: 73: Interval = 0;
-"73
-[e = F2374 -> -> 0 `i `ui ]
-[; ;main.c: 74: mTouch_Scan();
-"74
+[; ;main.c: 96: Interval = 0;
+"96
+[e = F2377 -> -> 0 `i `ui ]
+[; ;main.c: 97: mTouch_Scan();
+"97
 [e ( _mTouch_Scan ..  ]
-"75
+"98
 }
-[e :U 279 ]
-"76
+[e :U 281 ]
+"99
 }
-[e :U 278 ]
-[; ;main.c: 75: }
-[; ;main.c: 76: }
-[; ;main.c: 77: UART_Interrupt();
-"77
+[e :U 280 ]
+[; ;main.c: 98: }
+[; ;main.c: 99: }
+[; ;main.c: 100: UART_Interrupt();
+"100
 [e ( _UART_Interrupt ..  ]
-[; ;main.c: 78: }
-"78
-[e :UE 277 ]
+[; ;main.c: 101: }
+"101
+[e :UE 279 ]
 }
-"81
+"104
 [v _UART_Init_Port `(v ~T0 @X0 1 ef ]
-"82
+"105
 {
-[; ;main.c: 81: void UART_Init_Port(void)
-[; ;main.c: 82: {
+[; ;main.c: 104: void UART_Init_Port(void)
+[; ;main.c: 105: {
 [e :U _UART_Init_Port ]
 [f ]
-[; ;main.c: 83: TRISA &= ~(1<<4);
-"83
+[; ;main.c: 106: TRISA &= ~(1<<4);
+"106
 [e =& _TRISA -> ~ << -> 1 `i -> 4 `i `uc ]
-[; ;main.c: 84: ANSELA &= ~(1<<4);
-"84
+[; ;main.c: 107: ANSELA &= ~(1<<4);
+"107
 [e =& _ANSELA -> ~ << -> 1 `i -> 4 `i `uc ]
-[; ;main.c: 85: APFCON |= (1<<2);
-"85
+[; ;main.c: 108: APFCON |= (1<<2);
+"108
 [e =| _APFCON -> << -> 1 `i -> 2 `i `uc ]
-[; ;main.c: 86: }
-"86
-[e :UE 280 ]
+[; ;main.c: 109: }
+"109
+[e :UE 282 ]
 }
-"88
+"111
 [v _PWM_Init_Port `(v ~T0 @X0 1 ef ]
-"89
+"112
 {
-[; ;main.c: 88: void PWM_Init_Port(void)
-[; ;main.c: 89: {
+[; ;main.c: 111: void PWM_Init_Port(void)
+[; ;main.c: 112: {
 [e :U _PWM_Init_Port ]
 [f ]
-[; ;main.c: 90: TRISA &= ~(1<<2);
-"90
+[; ;main.c: 113: TRISA &= ~(1<<2);
+"113
 [e =& _TRISA -> ~ << -> 1 `i -> 2 `i `uc ]
-[; ;main.c: 91: APFCON &= ~(1<<0);
-"91
+[; ;main.c: 114: APFCON &= ~(1<<0);
+"114
 [e =& _APFCON -> ~ << -> 1 `i -> 0 `i `uc ]
-[; ;main.c: 92: ANSELA &= ~(1<<2);
-"92
+[; ;main.c: 115: ANSELA &= ~(1<<2);
+"115
 [e =& _ANSELA -> ~ << -> 1 `i -> 2 `i `uc ]
-[; ;main.c: 93: }
-"93
-[e :UE 281 ]
+[; ;main.c: 116: }
+"116
+[e :UE 283 ]
 }
-"95
+"118
 [v _mTouch_Init_Port `(v ~T0 @X0 1 ef ]
-"96
+"119
 {
-[; ;main.c: 95: void mTouch_Init_Port(void)
-[; ;main.c: 96: {
+[; ;main.c: 118: void mTouch_Init_Port(void)
+[; ;main.c: 119: {
 [e :U _mTouch_Init_Port ]
 [f ]
-[; ;main.c: 97: TRISA |= (1<<0);
-"97
+[; ;main.c: 120: TRISA |= (1<<0);
+"120
 [e =| _TRISA -> << -> 1 `i -> 0 `i `uc ]
-[; ;main.c: 98: ANSELA |= (1<<0);
-"98
+[; ;main.c: 121: ANSELA |= (1<<0);
+"121
 [e =| _ANSELA -> << -> 1 `i -> 0 `i `uc ]
-[; ;main.c: 99: }
-"99
-[e :UE 282 ]
+[; ;main.c: 122: }
+"122
+[e :UE 284 ]
 }
